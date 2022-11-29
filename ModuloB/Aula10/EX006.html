@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      ul {
+        list-style-type: none;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <h1>Somando Valores</h1>
+      <ul>
+        <li>
+          <label>Numero 1</label>
+          <input type="number" name="txtn1" id="txtn1" />
+        </li>
+        <li>
+            <label>Numero 2</label>
+            <input type="number" name="txtn2" id="txtn2" />
+        </li>
+        <li>
+            <label>Resultado</label>
+            <input type="number" name="resultado" id="resultado" disabled />
+        </li>
+        <input type="button" value="Somar" onclick="Somar()" />
+      </ul>
+    </form>
+
+    <script>
+        var num1,num2,total;
+
+        num1 = document.getElementById("txtn1");
+        num2 = document.getElementById("txtn2");
+
+        function Somar(){
+            total = Number.parseInt(num1.value) + Number.parseInt(num2.value);
+            document.getElementById("resultado").value = total;
+        }
+    </script>
+  </body>
+</html>
